@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../Components/Card'
-import useFetch from '../hooks/useFetch'
+import useFetch from '../Hooks/useFetch'
 
 function Products() {
   const [loading, error, data] = useFetch('https://dummyjson.com/products')
