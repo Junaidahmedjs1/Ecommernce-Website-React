@@ -1,44 +1,44 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Layout from './Layout.jsx'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
-import Products from './pages/Products.jsx'
-import SingleProduct from './Pages/SingleProduct.jsx'
-
+import Layout from './Layout'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
+import Products from './Pages/Products'
+import SingleProduct from './Pages/SingleProduct'
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path:(``),
     element: <Layout/>,
-    children: [
+    children:[
       {
-        path: '',
+        path:(``),
         element: <Home/>
       },
       {
-        path: 'about',
+        path:(`about`),
         element: <About/>
       },
       {
-        path: 'contact',
+        path:(`contact`),
         element: <Contact/>
       },
       {
-        path: 'products',
+        path:(`products`),
         element: <Products/>
       },
       {
-        path: 'product/:id',
+        path:(`product/:id`),
         element: <SingleProduct/>
       },
-    
+
     ]
   }
 ])
 
+
 createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}/>
+ <RouterProvider router={router}/>
 )
